@@ -1,3 +1,6 @@
-2023/01/30-00:33:22.660 3 Reusing MANIFEST /home/siami/.config/chromium/Default/Session Storage/MANIFEST-000001
-2023/01/30-00:33:22.662 3 Recovering log #3
-2023/01/30-00:33:22.663 3 Reusing old log /home/siami/.config/chromium/Default/Session Storage/000003.log 
+2023/01/30-00:52:09.606 5 Reusing MANIFEST /home/siami/.config/chromium/Default/Session Storage/MANIFEST-000001
+2023/01/30-00:52:09.607 5 Recovering log #3
+2023/01/30-00:52:09.607 5 Reusing old log /home/siami/.config/chromium/Default/Session Storage/000003.log 
+2023/01/30-00:52:22.232 3 Level-0 table #5: started
+2023/01/30-00:52:22.246 3 Level-0 table #5: 18261 bytes OK
+2023/01/30-00:52:22.264 3 Delete type=0 #3
