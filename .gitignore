@@ -5,6 +5,8 @@
 .local/
 .lesshst
 
+.config/chromium/
+
 Downloads/
 Documents/
 Pictures/
