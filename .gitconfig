@@ -1,3 +1,5 @@
 [user]
 	name = agolebiowska
 	email = agataxgolebiowska@gmail.com
+[credential]
+	credentialStore = cache
