@@ -21,6 +21,8 @@ zsh-syntax-highlighting
 
 source $ZSH/oh-my-zsh.sh
 
+bindkey '^I' autosuggest-accept
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -42,5 +44,6 @@ export TERM="xterm-256color"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
