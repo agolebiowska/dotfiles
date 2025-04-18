@@ -32,7 +32,6 @@ set nocompatible
 set number
 set cursorline
 set encoding=utf-8
-set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -49,6 +48,7 @@ set backspace=indent,eol,start
 set termguicolors
 set background=dark
 set colorcolumn=80
+" set clipboard=unnamed
 colorscheme wildcharm
 syntax on
 
@@ -95,15 +95,13 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=1
-let NERDTreeQuitOnOpen = 0
 let g:NERDTreeIgnore = ['\.sw*']
-nmap <Leader>r :NERDTreeRefreshRoot<CR>
-nmap <C-n> :NERDTreeToggle<CR>
-" Key bindings for window navigation
-nnoremap <Left> :wincmd h<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>r :NERDTreeRefreshRoot<CR>
 nnoremap <Down> :wincmd j<CR>
 nnoremap <Up> :wincmd k<CR>
 nnoremap <Right> :wincmd l<CR>
+
 " FZF
 nmap <C-p> :Files<CR>
 " FZF with Ripgrep for searching within files
