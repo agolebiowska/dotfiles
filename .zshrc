@@ -7,6 +7,7 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -30,7 +31,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 alias v="vim -c 'NERDTree'"
-alias python="python3"
 alias pip="pip3"
 alias jup="jupyter lab --no-browser"
 alias gauth="gcloud auth login"
