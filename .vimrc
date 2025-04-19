@@ -9,7 +9,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 Plug 'pangloss/vim-javascript'
-Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python'}
+" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python'}
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

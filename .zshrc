@@ -22,12 +22,14 @@ zsh-syntax-highlighting
 source $ZSH/oh-my-zsh.sh
 
 bindkey '^I' autosuggest-accept
+bindkey '^I' menu-complete
+bindkey '^[[Z' reverse-menu-complete
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-alias v="vim"
+alias v="vim -c 'NERDTree'"
 alias python="python3"
 alias pip="pip3"
 alias jup="jupyter lab"
