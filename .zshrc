@@ -18,6 +18,7 @@ docker
 colored-man-pages
 zsh-autosuggestions
 zsh-syntax-highlighting
+virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -31,8 +32,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 alias v="vim -c 'NERDTree'"
-alias pip="pip3"
 alias jup="jupyter lab --no-browser"
+alias nbc="python3 -m nbconvert --to python"
 alias gauth="gcloud auth login"
 alias gauthad="gcloud auth application-default login"
 alias ls="ls -G"
@@ -46,4 +47,5 @@ export TERM="xterm-256color"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
