@@ -18,6 +18,7 @@ docker
 colored-man-pages
 zsh-autosuggestions
 zsh-syntax-highlighting
+virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -31,10 +32,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 alias v="vim -c 'NERDTree'"
-alias pip="pip3"
 alias jup="jupyter lab --no-browser"
-alias gauth="gcloud auth login"
-alias gauthad="gcloud auth application-default login"
+alias nbc="python3 -m nbconvert --to python"
+alias gauth="gcloud auth login --no-launch-browser"
+alias gauthad="gcloud auth application-default login --no-launch-browser"
 alias ls="ls -G"
 alias ll="ls -la"
 alias ..="cd .."
@@ -49,10 +50,7 @@ export TERM="xterm-256color"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# Created by `pipx` on 2025-04-19 18:54:06
 export PATH="$PATH:/Users/gagata/.local/bin"
 [[ -e "/Users/gagata/mdproxy/data/mdproxy_zshrc" ]] && source "/Users/gagata/mdproxy/data/mdproxy_zshrc" # MDPROXY-ZSHRC
 
