@@ -48,4 +48,10 @@ export TERM="xterm-256color"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Created by `pipx` on 2025-04-24 21:15:52
+export PATH="$PATH:/usr/local/google/home/gagata/.local/bin"
