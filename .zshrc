@@ -42,6 +42,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias t="tmux"
 alias ta="tmux attach -t"
+alias mdc="mdproxy_tools --connect && mdproxy_tools --verify"
+alias uplink="uplink-helper login"
 
 export TERM="xterm-256color"
 
@@ -49,9 +51,16 @@ export TERM="xterm-256color"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# Load Angular CLI autocompletion.
 source <(ng completion script)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# Created by `pipx` on 2025-04-24 21:15:52
-export PATH="$PATH:/usr/local/google/home/gagata/.local/bin"
+if [ $(uname -s) == "Linux" ]; then
+    export PATH="$PATH:/usr/local/google/home/gagata/.local/bin"
+elif [ $(uname -s) == "Darwin" ]; then
+    export PATH="$PATH:/Users/gagata/.local/bin"
+
+[[ -e "/Users/gagata/mdproxy/data/mdproxy_zshrc" ]] && source "/Users/gagata/mdproxy/data/mdproxy_zshrc" # MDPROXY-ZSHRC
+
+if [ -f '/Users/gagata/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gagata/google-cloud-sdk/path.zsh.inc'; fi
+
+if [ -f '/Users/gagata/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gagata/google-cloud-sdk/completion.zsh.inc'; fi
