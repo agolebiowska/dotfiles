@@ -108,8 +108,9 @@ nnoremap <Right> :wincmd l<CR>
 " FZF
 nmap <C-p> :Files<CR>
 " FZF with Ripgrep for searching within files
-command! -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!{.git,node_modules,*.cache,*.log,*.h,*.sys,*.dll}/*" '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+command! -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!{.git,node_modules,*.cache,*.log,*.h,*.sys,*.dll,*.venv}/*" '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 nnoremap <C-f> :Rg<CR>
+
 " vimspector settings
 let g:vimspector_enable_mappings = 'HUMAN'
 
@@ -123,6 +124,7 @@ nmap <Leader>db :call vimspector#ToggleBreakpoint()<CR>
 nmap <Leader>dw :call vimspector#AddWatch()<CR>
 nmap <Leader>df :call vimspector#GetFrame()<CR>
 nmap <Leader>dv :call vimspector#Evaluate()<CR>
+
 " Goyo for distraction-free writing
 nmap <Leader>z :Goyo<CR>
 " REPL toggler
@@ -150,11 +152,13 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-css'
   \ ]
+
 " Configure Enter key for completion choice
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K <Plug>(coc-hover)
+
 " Markdown Preview settings
 let g:mkdp_open_to_the_world = 1
 let g:mkdp_open_ip = '127.0.0.1'
@@ -164,6 +168,7 @@ let g:mkdp_echo_preview_url = 1
 nmap <Leader>mp :MarkdownPreview<CR>
 nmap <Leader>mc :MarkdownPreviewStop<CR>
 nmap <Leader>mt :MarkdownPreviewToggle<CR>
+
 " Writing Markdown settings
 " za toggle a fold your cursor is on
 let g:vim_markdown_folding_disabled = 0
@@ -172,11 +177,13 @@ let g:vim_markdown_borderless_table = 1
 
 " Pasting images
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
 " Vimtex settings
 let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_view_method = 'zathura'
 nmap <Leader>lc :VimtexCompile<CR>
 nmap <Leader>lv :VimtexView<CR>
+
 " Additional configurations for notes
 
 " Daily notes
