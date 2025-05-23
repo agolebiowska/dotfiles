@@ -46,14 +46,15 @@ set splitbelow
 set splitright
 set backspace=indent,eol,start
 set backspace=indent,eol,start
-" set termguicolors
-" set background=dark
+set termguicolors
+set background=dark
 set colorcolumn=80
 " set clipboard=unnamed
 " colorscheme wildcharm
-" syntax on
-" highlight Normal ctermbg=NONE guibg=NONE
-" highlight NonText ctermbg=NONE guibg=NONE
+colorscheme catppuccin_macchiato
+syntax on
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
 
 " Set the Leader key
 let mapleader = ","
