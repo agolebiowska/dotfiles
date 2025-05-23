@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -24,6 +24,7 @@ Plug 'img-paste-devs/img-paste.vim'
 Plug 'sillybun/vim-repl'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
 
@@ -45,15 +46,14 @@ set splitbelow
 set splitright
 set backspace=indent,eol,start
 set backspace=indent,eol,start
-set termguicolors
+" set termguicolors
 " set background=dark
 set colorcolumn=80
 " set clipboard=unnamed
-colorscheme wildcharm
-syntax on
-
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
+" colorscheme wildcharm
+" syntax on
+" highlight Normal ctermbg=NONE guibg=NONE
+" highlight NonText ctermbg=NONE guibg=NONE
 
 " Set the Leader key
 let mapleader = ","
@@ -65,7 +65,8 @@ let g:indentLine_char = '›'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
-let g:airline_theme  = 'base16_apathy'
+" let g:airline_theme  = 'base16_apathy'
+let g:airline_theme = 'catppuccin_macchiato'
 
 function! AirlineModeIcon()
     let l:mode = mode()
@@ -93,17 +94,6 @@ let g:airline#extensions#default#layout = [
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_airline_statusline = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
-
-" NERDTree settings
-let g:NERDTreeShowHidden=1
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeDirArrows=1
-let g:NERDTreeIgnore = ['\.sw*']
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>r :NERDTreeRefreshRoot<CR>
-nnoremap <Down> :wincmd j<CR>
-nnoremap <Up> :wincmd k<CR>
-nnoremap <Right> :wincmd l<CR>
 
 " FZF
 nmap <C-p> :Files<CR>
