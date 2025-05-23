@@ -1,0 +1,31 @@
+font-family = Iosevka Nerd Font
+font-size = 15
+
+# config-default-files = false
+shell-integration = zsh
+shell-integration-features = no-cursor
+
+window-theme = auto
+macos-titlebar-style = hidden
+# macos-titlebar-style = transparent
+window-padding-x = 20
+window-padding-y = 20
+ 
+background-opacity = 0.8
+background-blur = 30
+unfocused-split-opacity = 0.7
+# theme = Dark Pastel
+theme = catppuccin-macchiato
+
+# selection-background = #b5d5ff
+# selection-foreground = #000000
+ 
+cursor-style = block
+cursor-style-blink = false
+
+mouse-hide-while-typing = true
+ 
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+clipboard-paste-protection = false

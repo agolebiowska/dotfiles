@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Default layout (can be bsp, stack or float)
+yabai -m config layout bsp  # Default to stacked layout
+
+# New window placement
+yabai -m config window_placement second_child
+
+# Window appearance
+yabai -m config window_opacity off
+yabai -m config window_shadow on
+yabai -m config window_border off
+yabai -m config split_ratio 0.5
+
+# Auto balance windows
+yabai -m config auto_balance on
+
+# Mouse setup
+yabai -m config mouse_follows_focus on
+yabai -m config focus_follows_mouse off
+
+# Apps to not manage (add apps that shouldn't be tiled)
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^QuickTime Player$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rile --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^SF Symbols$" manage=off
+yabai -m rule --add app="^love$" manage=off
+yabai -m rule --add title="LÖVE" manage=off
+
+yabai -m config top_padding 12
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 12
+
+yabai -m config external_bar all:37:0
+
+yabai -m config mouse_follows_focus on
+yabai -m config mouse_modifier alt
+
+# left click + drag
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+yabai -m mouse_drop_action swap
+
+borders active_color=0xfff5bde6 inactive_color=0xff6e738d width=6.0 style=round &
