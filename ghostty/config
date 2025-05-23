@@ -14,8 +14,8 @@ window-padding-y = 20
 background-opacity = 0.8
 background-blur = 30
 unfocused-split-opacity = 0.7
+theme = catppuccin-macchiato.conf
 # theme = Dark Pastel
-theme = catppuccin-macchiato
 
 # selection-background = #b5d5ff
 # selection-foreground = #000000
