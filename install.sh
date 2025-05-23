@@ -14,7 +14,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     ln -sf $(pwd)/yabai ~/.config/yabai
     ln -sf $(pwd)/skhd ~/.config/skhd
     ln -sf $(pwd)/sketchybar ~/.config/sketchybar
-    ln -sf $(pwd)/karabiner ~/.config/karabiner
+    ln -sf $(pwd)/karabiner  ~/.config/karabiner
 	
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "# Linux specific settings" >> ~/.zshrc.local
@@ -25,4 +25,5 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-echo "[ -f ~/.zshrc.local ] && source ~/.zshrc.local" >> ~/.zshrc
+grep -qxF '[ -f ~/.zshrc.local ] && source ~/.zshrc.local' ~/.zshrc || echo '[ -f ~/.zshrc.local ] && source ~/.zshrc.local' >> ~/.zshrc
+
