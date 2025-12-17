@@ -49,7 +49,7 @@ set termguicolors
 set background=dark
 set colorcolumn=80
 " set clipboard=unnamed
-" colorscheme wildcharm
+colorscheme wildcharm
 colorscheme catppuccin_macchiato
 syntax on
 highlight Normal ctermbg=NONE guibg=NONE
@@ -134,7 +134,7 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 
 " Pass command-line options to the 'black' fixer when run by ALE
-let g:ale_python_black_options = '--line-length 80'
+let g:ale_python_black_options = '--line-length 88'
 
 " CoC settings for autocomplete
 " gd - go to definition, gr - find references, K - show hover documentation
